@@ -15,7 +15,7 @@ Pastikan sistem Anda sudah terinstal **Node.js** (rekomendasi versi 18.x atau te
    ```bash
    npm run dev
    ```
-4. Buka [http://localhost:3000](http://localhost:3000) di peramban (browser) Anda. Sangat disarankan untuk menggunakan fitur *Responsive Design Mode / Device Toolbar* di peramban Anda untuk pengalaman *mobile-first* yang optimal sesuai desain.
+4. Buka [http://localhost:3000](http://localhost:3000) atau  https://edufio-testskill.nfh.my.id di peramban (browser) Anda. Sangat disarankan untuk menggunakan fitur *Responsive Design Mode / Device Toolbar* di peramban Anda untuk pengalaman *mobile-first* yang optimal sesuai desain.
 
 ## 🧠 Asumsi & Keputusan Mandiri
 
