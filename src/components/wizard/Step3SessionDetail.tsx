@@ -10,7 +10,7 @@
  */
 
 import { useState, useMemo } from 'react';
-import { addMinutes, parse, format } from 'date-fns';
+import { addMinutes, parse, format, parseISO } from 'date-fns';
 import { id as idLocale } from 'date-fns/locale';
 import { validateSession } from '@/lib/validateSession';
 import type { Session } from '@/types';
@@ -57,7 +57,7 @@ export default function Step3SessionDetail({
   // Hitung jam selesai otomatis
   const jamSelesai = useMemo(() => {
     try {
-      const start = parse(jamMulai, 'HH:mm', new Date(tanggal));
+      const start = parse(jamMulai, 'HH:mm', parseISO(tanggal));
       return format(addMinutes(start, durasiMenit), 'HH:mm');
     } catch {
       return '--:--';
@@ -83,7 +83,7 @@ export default function Step3SessionDetail({
   // Format tanggal header
   const tanggalLabel = useMemo(() => {
     try {
-      return format(new Date(tanggal), "EEEE, d MMMM yyyy", { locale: idLocale });
+      return format(parseISO(tanggal), "EEEE, d MMMM yyyy", { locale: idLocale });
     } catch {
       return tanggal;
     }

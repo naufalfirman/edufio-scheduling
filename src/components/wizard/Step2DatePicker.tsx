@@ -25,6 +25,7 @@ import {
   isBefore,
   isEqual,
   format,
+  parseISO,
 } from 'date-fns';
 import { id as idLocale } from 'date-fns/locale';
 import type { Session } from '@/types';
@@ -55,7 +56,7 @@ export default function Step2DatePicker({
 
   // Tanggal-tanggal yang sudah ada sesi
   const sessionDates = useMemo(
-    () => existingSessions.map((s) => startOfDay(new Date(s.tanggal))),
+    () => existingSessions.map((s) => startOfDay(parseISO(s.tanggal))),
     [existingSessions]
   );
 
